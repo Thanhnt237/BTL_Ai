@@ -1,7 +1,7 @@
 //normalize data
 var heights = [];
 var sizes = [];
-const sizeCategories = ["XXS","XS","S","M","L","XL","XXL","XXXL"];
+const sizeCategories = ["XS","S","M","L","XL","XXL"];
 
 data.map(item => {
   heights.push( (item.height - 1200)/900 );
@@ -30,7 +30,7 @@ let hiddenLayer = tf.layers.dense({
 });
 
 let outputLayer = tf.layers.dense({
-  units: 8,
+  units: 6,
   activation: "softmax"
 });
 

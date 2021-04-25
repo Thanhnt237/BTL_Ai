@@ -1,4 +1,4 @@
-const trainCount = 10
+const trainCount = 100;
 
 //train model
 async function train(){
@@ -28,8 +28,9 @@ train().then((result)=>{
 
     //Predict
     let predictResult = model.predict(heightInputTensor);
-    let max = predictResult.argMax().dataSync();
+    let max = predictResult.argMax(1).dataSync();
 
+    console.log(predictResult);
     console.log(max);
     resultText.innerHTML = "size ao phu hop cua ban la: " + sizeCategories[max];
   })

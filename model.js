@@ -15,7 +15,7 @@ console.log(heights);
 
 let inputdata = tf.tensor1d(heights);
 let sizesTensor = tf.tensor1d(sizes, "int32");
-let outputdata = tf.oneHot(sizesTensor, 8);
+let outputdata = tf.oneHot(sizesTensor, 6);
 
 inputdata.print();
 //outputdata.print();

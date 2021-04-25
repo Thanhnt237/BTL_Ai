@@ -1,4 +1,4 @@
-const trainCount = 100;
+const trainCount = 1000;
 
 //train model
 async function train(){
